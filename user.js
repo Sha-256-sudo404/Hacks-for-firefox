@@ -1,22 +1,37 @@
-//cacheonram: to reduce i/o on SSD and make better use of ram without the fuss of creating ramdisk, ENSURE RAM IS NOT THE BOTTLENECK BEFORE USAGE
+//cacheonram
 user_pref("browser.cache.disk.enable",false);
 user_pref("browser.cache.disk.capacity",0);
 user_pref("browser.cache.memory.enable",true);
-user_pref("browser.cache.memory.capacity",512000); //512MB, should change value < quater of all ram, otherwise is bloat and waste of ram
-user_pref("browser.sessionhistory.max_total_viewers", 4);// sane No. of sessions stored per tab, to reduce cache accumulation
+user_pref("browser.sessionhistory.max_total_viewers", 3);
+user_pref("browser.cache.memory.capacity",512000);
+user_pref("dom.script_loader.bytecode_cache.enabled",true);
+user_pref("dom.script_loader.bytecode_cache.strategy",-2);
+user_pref("network.http.rcwn.enabled", false);
+user_pref("browser.sessionstore.resume_from_crash",false);
+user_pref("browser.cache.jsbc_compression_level", 6);
+user_pref("browser.cache.check_doc_frequency", 0);
 
-//scrolling for better visuals, only recommended for refresh rates 60Hz<#<75Hz,otherwise checkout smoothfox
+//scrolling
 user_pref("general.smoothScroll",true);
 user_pref("general.smoothScroll.msdPhysics.enabled",true);
 
-//privacy: remove extra pinging to servers for checking internet connectivity
+//privacy
 user_pref("network.captive-portal-service.enabled",false);
-//Additional tweaks
-//Lv.1 Disable sessin restore, search suggestions
-//Lv.2 Ublock origin installed + strict mode for Enhanced Tracking Protection, Clear browsing history on exit for those who don't bother login everytime, HTTPS only, DNS-over-HTTPS (1.1.1.1, Rethinkdns...)
-//Lv.3 arkenfox user.js recommendations or directly use librewolf for max privcay
+user_pref("network.predictor.enable-prefetch", false);
+user_pref("network.prefetch-next", false);
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
+user_pref("browser.places.speculativeConnect.enabled", false);
+user_pref("network.predictor.enabled", false);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
+user_pref("network.dns.disablePrefetch", true);
 
-
-//rendering tweaks: hardware acceleration tweaks for power efficiency
+//rendering
 user_pref("media.ffmpeg.vaapi.enabled",true);
-user_pref("browser.preferences.defaultPerformanceSettings.enabled",false);
+user_pref("network.early-hints.enabled", true);
+user_pref("network.early-hints.preconnect.enabled", true);
+user_pref("network.fetchpriority.enabled", true);
+user_pref("content.notify.interval", 100000);
+user_pref("nglayout.initialpaint.delay", 50);
+user_pref("nglayout.initialpaint.delay_in_oopif", 75);
+user_pref("dom.ipc.processCount.webIsolated", 3);
+user_pref("dom.ipc.processPrelaunch.fission.number", 3);

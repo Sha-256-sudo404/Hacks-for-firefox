@@ -1,7 +1,6 @@
 # Hacks-for-firefox
 Assumption of these hacks: 
-1. Hardware acceleration support enabled (VAAPI)
-2. Sufficient RAM >= 8GB for cache on ram to speedup
-3. Better use linux
+1. Sufficient RAM >= 8GB for efficient cache usage on ram to speedup, maximize ram usage and in turn reduce disk i/o
+2. Reduce prefetch and modify rendering parameters for better cpu utilization and rendering speed
 
-This is my user.js opinionated for speed on linux
+User.js opinionated for latency on linux

@@ -6,4 +6,5 @@ Assumption of these hacks:
 Benchmarks on my machine showed lowered latency (from 150ms to ~100ms) and improved consistency (s.d. 4.5% to 2.6%)
 
 user.js opinionated for reduced latency and maximizing speedometer scores on firefox in linux
+
 Thanks to betterfox and arkenfox for collection of ideas
